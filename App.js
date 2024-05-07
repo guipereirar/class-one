@@ -1,6 +1,4 @@
-import { Text, View } from 'react-native';
-
-import { styles } from './src/class/style-externo';
+import { StyleSheet, Text, View, Platform } from 'react-native';
 
 export default function App() {
   return (
@@ -10,3 +8,26 @@ export default function App() {
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: Platform.OS === 'android' ? 'green' : 'pink'
+  },
+  title: {
+    fontSize: 50,
+    fontWeight: 'bold',
+    color: 'white',
+    fontStyle: 'italic'
+  },
+  subtitle: {
+    paddingTop: 10,
+    fontSize: 20,
+    color: 'black',
+    fontWeight: '500'
+  }
+})
