@@ -1,33 +1,6 @@
-import { StyleSheet, Text, View, Platform } from 'react-native';
+import CreativeComponent from "./src/class-component/native-component";
+
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>aaaaaaaaaaaaaaaaa</Text>
-      <Text style={styles.subtitle}>bbbbbbbbbbbbbb</Text>
-    </View>
-  )
+  return <CreativeComponent />;
 }
-
-const styles = StyleSheet.create({
-  container:{
-    flex: 1,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: Platform.OS === 'android' ? 'green' : 'pink'
-  },
-  title: {
-    fontSize: 50,
-    fontWeight: 'bold',
-    color: 'white',
-    fontStyle: 'italic'
-  },
-  subtitle: {
-    paddingTop: 10,
-    fontSize: 20,
-    color: 'black',
-    fontWeight: '500'
-  }
-})
